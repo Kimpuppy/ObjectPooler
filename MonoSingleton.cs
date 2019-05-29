@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+//	Copyright (c) Kimpuppy.
+//	http://bakak112.tistory.com/
+
+using UnityEngine;
 
 public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
