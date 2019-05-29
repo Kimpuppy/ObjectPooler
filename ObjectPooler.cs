@@ -42,7 +42,7 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
     }
 
     public void CreatePool(PoolObject poolObject)
-	{
+    {
         PoolList.Add(poolObject);
 
         Queue<GameObject> poolQueue = new Queue<GameObject>();
@@ -53,13 +53,13 @@ public class ObjectPooler : MonoSingleton<ObjectPooler>
             poolQueue.Enqueue(obj);
         }
         _poolDictionary.Add(poolObject.Tag, poolQueue);
-	}
+    }
 
     public void CreatePool(string tag, GameObject prefab, int size)
-	{
+    {
         PoolObject poolObject = new PoolObject(tag, prefab, size);
         CreatePool(poolObject);
-	}
+    }
 
     public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
